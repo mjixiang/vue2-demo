@@ -13,3 +13,6 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
+## demo
+https://mjixiang.github.io/vue2-demo/dist
