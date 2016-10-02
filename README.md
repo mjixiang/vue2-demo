@@ -5,7 +5,7 @@
 ## Build Setup
 
 ``` bash
-npm install
+npm install (or `cnpm install`)
 
 # serve with hot reload at localhost:8080
 npm run dev
