@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@import url('./iconfont/iconfont.css');
+//前缀
+$prefix:xa;
+//主题色
+$themeColor:#34394B;
+//主题字体颜色
+$themeFontColor:#FF2D50;
+//通用字体颜色
+$fontColor:#333 !default;
+//默认边框颜色
+$borderColor:#e4e4e4 !default;
+//默认背景颜色
+$bgColor:#F8FAFC !default;
+
+/* reset */
+  html{box-sizing:border-box;font-size:14px;}
+  *{
+    margin:0;
+    padding:0;
+    -webkit-overflow-scrolling:touch;
+    box-sizing:inherit;
+    &::before,&::after{
+      box-sizing:inherit;
+    }
+  }
+body{color:$fontColor;line-height:1.6;background:$bgColor;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;}
+ul,li,ol{padding:0;margin:0;list-style:none;}
+input:focus{outline:0;}
+a{text-decoration:none;cursor:pointer;color:$fontColor;}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+h1{font-weight:normal;font-size:16px;color:#333;}
+p{line-height:24px;}
+
+html,body,#app{height:100%;overflow-x:hidden;overflow-y:auto;}
+
+
+$headerHeight:50px;
+.xa-header{
+  background:$themeColor;
+  color:white;
+  height:$headerHeight;
+  line-height:$headerHeight;
+  display:flex;
+  font-size:16px;
+  .xa-icon-btn{
+    height:$headerHeight;width:$headerHeight;min-width:$headerHeight;text-align:center;
+    >i{font-size:24px;}
+  }
+  >.title{
+    padding:0 14px;
+    flex:1;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+  }
+}
+
+.xa-arrow{
+  color:#ddd;
+  &:after{content:'';display:inline-block;width:8px;height:8px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg);}
+}
+

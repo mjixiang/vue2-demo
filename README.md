@@ -5,13 +5,16 @@
 ## Build Setup
 
 ``` bash
-npm install (or `cnpm install`)
+$ npm install (or `cnpm install`)
 
 # serve with hot reload at localhost:8080
-npm run dev
+$ npm run dev
+
+# 适用于有独立服务器环境 监听代码变化更新文件(不更新版本号)
+$ npm run watch
 
 # build for production with minification
-npm run build
+$ npm run build
 ```
 
 ## demo
