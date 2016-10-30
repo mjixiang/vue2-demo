@@ -1,9 +1,9 @@
 <template>
 <div id="app" class="xa-box-vertical">
     <section class="xa-container xa-flex xa-box-vertical">
-    	<router-view keep-alive></router-view>
+    	<router-view></router-view>
     </section>
-  	<xa-footer :items="footerMenu" v-show="$route.meta.isShowFooter"></xa-footer>
+  	<xa-footer :items="footerMenu" v-if="$route.meta.isShowFooter"></xa-footer>
 </div>
 </template>
 
@@ -13,7 +13,7 @@
 	export default {
 		data(){
 			return {
-	            footerMenu
+        footerMenu
 			}
 		},
 	  	components:{
@@ -21,3 +21,14 @@
 	    }
 	}
 </script>
+
+<style scoped>
+  .footer-enter-active,.footer-leave-active{
+    transition:0.3s;
+  }
+  .footer-enter,.footer-leave-active{
+    transform:translateX(-10px);
+    opacity:0;
+    height:0;
+  }
+</style>

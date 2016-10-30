@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from './components/base/app.vue'
 import { routes,title } from './app.config.js'
 
-require('./common/common.css')
+import {App,ripple,toastText} from './components'
+
+
+import './common/common.css'
+import './common/app.scss'
 
 Vue.use(VueRouter)
 const router = new VueRouter({
@@ -15,8 +18,13 @@ router.beforeEach((to, from, next) => {
 	next()
 })
 
+Vue.component('ripple',ripple)
+Vue.component('toastText',toastText)
+
 new Vue({
 	el: '#app',
 	router,
 	render: h => h(App)
 })
+
+// console.log(Vue.prototype)

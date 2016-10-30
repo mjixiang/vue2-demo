@@ -44,7 +44,7 @@ exports.cssLoaders = function (options) {
   }
 }
 
-// Generate loaders for standalone style files (outside of .vue)
+// 为独立的样式文件生成loader(.vue以外的)
 exports.styleLoaders = function (options) {
   var output = []
   var loaders = exports.cssLoaders(options)
